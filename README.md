@@ -154,20 +154,20 @@ You will need a C++ compiler that supports the C++17 standard (for `std::optiona
 1.  **Clone the repository**:
     ```bash
     git clone https://github.com/GauravSharma018/LRU-Cache/
-    cd LRU-Cache
+    cd C:\Users\gaura\Desktop\Coding\LRU-Cache
     ```
 
 2.  **Compile the project**:
     Use a C++ compiler like g++ to compile the `main.cpp` file.
     ```bash
-    g++ main.cpp -o lru_benchmark -std=c++17 -O2
+    g++ main.cpp -o lru_benchmark -std=c++17
     ```
     * `-std=c++17`: Enables C++17 features.
     * `-O2`: Enables compiler optimizations for a more realistic benchmark.
 
 3.  **Run the benchmark**:
     ```bash
-    ./lru_benchmark
+    .\lru_benchmark.exe
     ```
 ### 📊 Summary of Differences
 ```
@@ -181,6 +181,28 @@ Overall Efficiency	           High                        Low	                  
 ```
 
 ### Example Output
+```
+--- LRU Cache Demonstration ---
+Cache content (MRU -> LRU): [1:one]
+Cache content (MRU -> LRU): [2:two] [1:one]
+Cache content (MRU -> LRU): [3:three] [2:two] [1:one]  
+
+Accessing key 1...
+Cache content (MRU -> LRU): [1:one] [3:three] [2:two]  
+
+Adding key 4 (should evict key 2)...
+Cache content (MRU -> LRU): [4:four] [1:one] [3:three] 
+
+Accessing non-existent key 5...
+Key 5 not found in cache.
+-----------------------------
+
+--- Performance Benchmark ---
+Cache Capacity: 1000, Operations: 100000
+Optimized LRU Cache (HashMap + Doubly Linked List) took: 139.614 ms
+Naive Cache (HashMap + Vector) took: 397.197 ms
+---------------------------
+```
 
 ## 📄 License
 This project is open-source and available under the **MIT License**. See the `LICENSE` file for more details.
