@@ -42,7 +42,7 @@ You will need a C++ compiler that supports the C++17 standard (for `std::optiona
 1.  **Clone the repository**:
     ```bash
     git clone [https://github.com/your-username/lru-cache-cpp.git](https://github.com/your-username/lru-cache-cpp.git)
-    cd lru-cache-cpp
+    cd LRU-Cache
     ```
 
 2.  **Compile the project**:
